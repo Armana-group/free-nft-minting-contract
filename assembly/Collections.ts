@@ -154,19 +154,6 @@ export class Collections {
     const balance = this._state.getBalance(to);
     const tokens = SafeMath.add(supply.value, args.number_tokens_to_mint);
 
-    // pay mint price token or check creator
-    // if (Constants.MINT_FEE) {
-    //   const token_pay = new Token(Constants.TOKEN_PAY);
-    //   const _result = token_pay.transfer(to, Constants.ADDRESS_PAY, SafeMath.mul(args.number_tokens_to_mint, Constants.MINT_PRICE));
-    //   System.require(_result, "Failed to pay mint");
-    // } else if (Constants.OWNER.length > 0) {
-    //   // if OWNER is setup
-    //   System.requireAuthority(authority.authorization_type.contract_call, Constants.OWNER);
-    // } else {
-    //   // otherwise, check contract id permissions
-    //   System.requireAuthority(authority.authorization_type.contract_call, this._contractId);
-    // }
-
     // check limit amount tokens
     System.require(tokens > 0, "token id out of bounds");
     // check limit amount tokens
@@ -201,9 +188,6 @@ export class Collections {
 
     // update the owner's balance
     balance.value = SafeMath.add(balance.value, args.number_tokens_to_mint);
-
-    // check limit address
-    // System.require(balance.value <= 10, "exceeds the limit of tokens per address");
 
     // increment supply
     supply.value = SafeMath.add(supply.value, args.number_tokens_to_mint);
