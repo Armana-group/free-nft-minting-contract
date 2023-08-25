@@ -1,0 +1,11 @@
+node_modules
+\.idea/
+\.vs/
+scripts
+*.spec.wasm
+*.spec.wat
+*.spec.map
+*.wat
+*.map
+*.pb
+*.sh

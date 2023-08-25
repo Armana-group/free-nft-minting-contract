@@ -1,0 +1,131 @@
+{
+    "methods": {
+        "name": {
+            "argument": "collections.name_arguments",
+            "return": "collections.string_object",
+            "description": "Returns the token's name",
+            "entry-point": "0x82a3537f",
+            "read-only": true
+        },
+        "uri": {
+            "argument": "collections.uri_arguments",
+            "return": "collections.string_object",
+            "description": "Returns the collection's uri",
+            "entry-point": "0x70e5d7b6",
+            "read-only": true
+        },
+        "token_uri": {
+            "argument": "collections.token_uri_arguments",
+            "return": "collections.string_object",
+            "description": "Returns the token's uri",
+            "entry-point": "0x40456c8e",
+            "read-only": true
+        },
+        "symbol": {
+            "argument": "collections.symbol_arguments",
+            "return": "collections.string_object",
+            "description": "Returns the token's symbol",
+            "entry-point": "0xb76a7ca1",
+            "read-only": true
+        },
+        "get_approved": {
+            "argument": "collections.get_approved_arguments",
+            "return": "collections.address_object",
+            "description": "Gets approved address for a token",
+            "entry-point": "0x4c731020",
+            "read-only": true
+        },
+        "is_approved_for_all": {
+            "argument": "collections.is_approved_for_all_arguments",
+            "return": "collections.bool_object",
+            "description": "Checks if an operator is approved by an owner",
+            "entry-point": "0xe7ab8ce5",
+            "read-only": true
+        },
+        "total_supply": {
+            "argument": "collections.total_supply_arguments",
+            "return": "collections.uint64_object",
+            "description": "Returns the token's total supply",
+            "entry-point": "0xb0da3934",
+            "read-only": true
+        },
+        "royalties": {
+            "argument": "collections.royalties_arguments",
+            "return": "collections.royalties_result",
+            "description": "Returns collection royalties",
+            "entry-point": "0x36e90cd0",
+            "read-only": true
+        },
+        "set_royalties": {
+            "argument": "collections.set_royalties_arguments",
+            "return": "collections.empty_object",
+            "description": "Returns collection royalties",
+            "entry-point": "0x3b5bb56b",
+            "read-only": false
+        },
+        "owner": {
+            "argument": "collections.owner_arguments",
+            "return": "collections.address_object",
+            "description": "Returns collection owner",
+            "entry-point": "0x4c102969",
+            "read-only": true
+        },
+        "transfer_ownership": {
+            "argument": "collections.transfer_ownership_arguments",
+            "return": "collections.empty_object",
+            "description": "Transfer ownership",
+            "entry-point": "0x394be702",
+            "read-only": false
+        },
+        "balance_of": {
+            "argument": "collections.balance_of_arguments",
+            "return": "collections.uint64_object",
+            "description": "Gets the balance of an owner",
+            "entry-point": "0x5c721497",
+            "read-only": true
+        },
+        "owner_of": {
+            "argument": "collections.owner_of_arguments",
+            "return": "collections.address_object",
+            "description": "Gets the owner of a token",
+            "entry-point": "0xed61c847",
+            "read-only": true
+        },
+        "mint": {
+            "argument": "collections.mint_arguments",
+            "return": "collections.empty_object",
+            "description": "Mints a new token",
+            "entry-point": "0xdc6f17bb",
+            "read-only": false
+        },
+        "burn": {
+            "argument": "collections.burn_arguments",
+            "return": "collections.empty_object",
+            "description": "Burns an existing token",
+            "entry-point": "0x859facc5",
+            "read-only": false
+        },
+        "transfer": {
+            "argument": "collections.transfer_arguments",
+            "return": "collections.empty_object",
+            "description": "Transfers a token",
+            "entry-point": "0x27f576ca",
+            "read-only": false
+        },
+        "approve": {
+            "argument": "collections.approve_arguments",
+            "return": "collections.empty_object",
+            "description": "Approves an address to transfer a token",
+            "entry-point": "0x74e21680",
+            "read-only": false
+        },
+        "set_approval_for_all": {
+            "argument": "collections.set_approval_for_all_arguments",
+            "return": "collections.empty_object",
+            "description": "Approves or revokes an address to operate on all tokens owned by caller",
+            "entry-point": "0x20442216",
+            "read-only": false
+        }
+    },
+    "types": "CuoSCiBhc3NlbWJseS9wcm90by9jb2xsZWN0aW9ucy5wcm90bxILY29sbGVjdGlvbnMaFGtvaW5vcy9vcHRpb25zLnByb3RvIg4KDGVtcHR5X29iamVjdCIlCg1zdHJpbmdfb2JqZWN0EhQKBXZhbHVlGAEgASgJUgV2YWx1ZSIpCg11aW50NjRfb2JqZWN0EhgKBXZhbHVlGAEgASgEQgIwAVIFdmFsdWUiIwoLYm9vbF9vYmplY3QSFAoFdmFsdWUYASABKAhSBXZhbHVlIiwKDmFkZHJlc3Nfb2JqZWN0EhoKBXZhbHVlGAEgASgMQgSAtRgGUgV2YWx1ZSI8Cgx0b2tlbl9vYmplY3QSGgoFb3duZXIYASABKAxCBIC1GAZSBW93bmVyEhAKA3VyaRgCIAEoCVIDdXJpIioKDmJhbGFuY2Vfb2JqZWN0EhgKBXZhbHVlGAEgASgEQgIwAVIFdmFsdWUiTAoOcm95YWx0eV9vYmplY3QSGgoGYW1vdW50GAEgASgEQgIwAVIGYW1vdW50Eh4KB2FkZHJlc3MYAiABKAxCBIC1GAZSB2FkZHJlc3MiZgoNY29uZmlnX29iamVjdBIaCgVvd25lchgBIAEoDEIEgLUYBlIFb3duZXISOQoJcm95YWx0aWVzGAIgAygLMhsuY29sbGVjdGlvbnMucm95YWx0eV9vYmplY3RSCXJveWFsdGllcyI3ChV0b2tlbl9hcHByb3ZhbF9vYmplY3QSHgoHYWRkcmVzcxgBIAEoDEIEgLUYBlIHYWRkcmVzcyI2ChhvcGVyYXRvcl9hcHByb3ZhbF9vYmplY3QSGgoIYXBwcm92ZWQYASABKAhSCGFwcHJvdmVkIhAKDm5hbWVfYXJndW1lbnRzIg8KDXVyaV9hcmd1bWVudHMiNgoTdG9rZW5fdXJpX2FyZ3VtZW50cxIfCgh0b2tlbl9pZBgBIAEoDEIEgLUYAlIHdG9rZW5JZCISChBzeW1ib2xfYXJndW1lbnRzIjkKFmdldF9hcHByb3ZlZF9hcmd1bWVudHMSHwoIdG9rZW5faWQYASABKAxCBIC1GAJSB3Rva2VuSWQiXQodaXNfYXBwcm92ZWRfZm9yX2FsbF9hcmd1bWVudHMSGgoFb3duZXIYASABKAxCBIC1GAZSBW93bmVyEiAKCG9wZXJhdG9yGAIgASgMQgSAtRgGUghvcGVyYXRvciIYChZ0b3RhbF9zdXBwbHlfYXJndW1lbnRzIhUKE3JveWFsdGllc19hcmd1bWVudHMiRQoQcm95YWx0aWVzX3Jlc3VsdBIxCgV2YWx1ZRgBIAMoCzIbLmNvbGxlY3Rpb25zLnJveWFsdHlfb2JqZWN0UgV2YWx1ZSJMChdzZXRfcm95YWx0aWVzX2FyZ3VtZW50cxIxCgV2YWx1ZRgBIAMoCzIbLmNvbGxlY3Rpb25zLnJveWFsdHlfb2JqZWN0UgV2YWx1ZSIRCg9vd25lcl9hcmd1bWVudHMiOgocdHJhbnNmZXJfb3duZXJzaGlwX2FyZ3VtZW50cxIaCgVvd25lchgBIAEoDEIEgLUYBlIFb3duZXIiMgoUYmFsYW5jZV9vZl9hcmd1bWVudHMSGgoFb3duZXIYASABKAxCBIC1GAZSBW93bmVyIjUKEm93bmVyX29mX2FyZ3VtZW50cxIfCgh0b2tlbl9pZBgBIAEoDEIEgLUYAlIHdG9rZW5JZCJvCg5taW50X2FyZ3VtZW50cxIUCgJ0bxgBIAEoDEIEgLUYBlICdG8SNQoVbnVtYmVyX3Rva2Vuc190b19taW50GAIgASgEQgIwAVISbnVtYmVyVG9rZW5zVG9NaW50EhAKA3VyaRgDIAEoCVIDdXJpIksKDmJ1cm5fYXJndW1lbnRzEhgKBGZyb20YASABKAxCBIC1GAZSBGZyb20SHwoIdG9rZW5faWQYAiABKAxCBIC1GAJSB3Rva2VuSWQiZQoSdHJhbnNmZXJfYXJndW1lbnRzEhgKBGZyb20YASABKAxCBIC1GAZSBGZyb20SFAoCdG8YAiABKAxCBIC1GAZSAnRvEh8KCHRva2VuX2lkGAMgASgMQgSAtRgCUgd0b2tlbklkInsKEWFwcHJvdmVfYXJndW1lbnRzEi8KEGFwcHJvdmVyX2FkZHJlc3MYASABKAxCBIC1GAZSD2FwcHJvdmVyQWRkcmVzcxIUCgJ0bxgCIAEoDEIEgLUYBlICdG8SHwoIdG9rZW5faWQYAyABKAxCBIC1GAJSB3Rva2VuSWQingEKHnNldF9hcHByb3ZhbF9mb3JfYWxsX2FyZ3VtZW50cxIvChBhcHByb3Zlcl9hZGRyZXNzGAEgASgMQgSAtRgGUg9hcHByb3ZlckFkZHJlc3MSLwoQb3BlcmF0b3JfYWRkcmVzcxgCIAEoDEIEgLUYBlIPb3BlcmF0b3JBZGRyZXNzEhoKCGFwcHJvdmVkGAMgASgIUghhcHByb3ZlZCJDCgptaW50X2V2ZW50EhQKAnRvGAEgASgMQgSAtRgGUgJ0bxIfCgh0b2tlbl9pZBgCIAEoDEIEgLUYAlIHdG9rZW5JZCJHCgpidXJuX2V2ZW50EhgKBGZyb20YASABKAxCBIC1GAZSBGZyb20SHwoIdG9rZW5faWQYAiABKAxCBIC1GAJSB3Rva2VuSWQiYQoOdHJhbnNmZXJfZXZlbnQSGAoEZnJvbRgBIAEoDEIEgLUYBlIEZnJvbRIUCgJ0bxgCIAEoDEIEgLUYBlICdG8SHwoIdG9rZW5faWQYAyABKAxCBIC1GAJSB3Rva2VuSWQilwEKF29wZXJhdG9yX2FwcHJvdmFsX2V2ZW50Ei8KEGFwcHJvdmVyX2FkZHJlc3MYASABKAxCBIC1GAZSD2FwcHJvdmVyQWRkcmVzcxIvChBvcGVyYXRvcl9hZGRyZXNzGAIgASgMQgSAtRgGUg9vcGVyYXRvckFkZHJlc3MSGgoIYXBwcm92ZWQYAyABKAhSCGFwcHJvdmVkIn4KFHRva2VuX2FwcHJvdmFsX2V2ZW50Ei8KEGFwcHJvdmVyX2FkZHJlc3MYASABKAxCBIC1GAZSD2FwcHJvdmVyQWRkcmVzcxIUCgJ0bxgCIAEoDEIEgLUYBlICdG8SHwoIdG9rZW5faWQYAyABKAxCBIC1GAJSB3Rva2VuSWRiBnByb3RvMwrnAwoca29pbm9zL2NoYWluL2F1dGhvcml0eS5wcm90bxIMa29pbm9zLmNoYWluGhRrb2lub3Mvb3B0aW9ucy5wcm90byJVCgtjYWxsX3RhcmdldBIlCgtjb250cmFjdF9pZBgBIAEoDEIEgLUYBlIKY29udHJhY3RJZBIfCgtlbnRyeV9wb2ludBgCIAEoDVIKZW50cnlQb2ludCKIAQoTYXV0aG9yaXplX2FyZ3VtZW50cxI0CgR0eXBlGAEgASgOMiAua29pbm9zLmNoYWluLmF1dGhvcml6YXRpb25fdHlwZVIEdHlwZRIyCgRjYWxsGAIgASgLMhkua29pbm9zLmNoYWluLmNhbGxfdGFyZ2V0SABSBGNhbGyIAQFCBwoFX2NhbGwiKAoQYXV0aG9yaXplX3Jlc3VsdBIUCgV2YWx1ZRgBIAEoCFIFdmFsdWUqWQoSYXV0aG9yaXphdGlvbl90eXBlEhEKDWNvbnRyYWN0X2NhbGwQABIbChd0cmFuc2FjdGlvbl9hcHBsaWNhdGlvbhABEhMKD2NvbnRyYWN0X3VwbG9hZBACQjRaMmdpdGh1Yi5jb20va29pbm9zL2tvaW5vcy1wcm90by1nb2xhbmcva29pbm9zL2NoYWluYgZwcm90bzM="
+}
