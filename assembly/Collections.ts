@@ -384,8 +384,9 @@ export class Collections {
     if (config.owner.length) {
       currentOwner = config.owner;
     } else {
-      currentOwner = Constants.OWNER;
+      currentOwner = this._contractId;
     }
+
     System.requireAuthority(authority.authorization_type.contract_call, currentOwner);
   }
 }
