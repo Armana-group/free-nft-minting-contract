@@ -94,7 +94,7 @@ export class Collections {
 
   owner(args: collections.owner_arguments): collections.address_object {
     const config = this._state.getConfig();
-    return new collections.address_object(config.owner);
+    return new collections.address_object(this._getOwner(config));
   }
 
   transfer_ownership(args: collections.transfer_ownership_arguments): collections.empty_object {
@@ -378,15 +378,16 @@ export class Collections {
 
   /**
    * Helpers
-   */
-  _checkOwner(config: collections.config_object): void {
-    let currentOwner: Uint8Array;
+  */
+  _getOwner(config: collections.config_object): Uint8Array {
     if (config.owner.length) {
-      currentOwner = config.owner;
+      return config.owner;
     } else {
-      currentOwner = this._contractId;
+      return this._contractId;
     }
+  }
 
-    System.requireAuthority(authority.authorization_type.contract_call, currentOwner);
+  _checkOwner(config: collections.config_object): void {
+    System.requireAuthority(authority.authorization_type.contract_call, this._getOwner(config));
   }
 }
