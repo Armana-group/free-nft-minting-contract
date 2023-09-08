@@ -2,18 +2,6 @@ import { System, Protobuf, authority } from "@koinos/sdk-as";
 import { collections } from "./proto/collections";
 
 export class Collections {
-  authorize(args: authority.authorize_arguments): authority.authorize_result {
-    // const call = args.call;
-    // const type = args.type;
-
-    // YOUR CODE HERE
-
-    const res = new authority.authorize_result();
-    res.value = true;
-
-    return res;
-  }
-
   name(args: collections.name_arguments): collections.string_object {
     // YOUR CODE HERE
 

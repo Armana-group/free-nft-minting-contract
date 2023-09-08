@@ -14,33 +14,6 @@ export class Collections {
     this._state = new State(this._contractId);
   }
 
-  private hasContractOwnerSigned(): bool {
-    const signatures = Protobuf.decode<value.list_type>(System.getTransactionField('signatures')!.message_value!.value!, value.list_type.decode);
-    const transactionId = System.getTransactionField('id')!.bytes_value;
-
-    for (let i = 0; i < signatures.values.length; i++) {
-      if (Arrays.equal(
-        this._contractId,
-        Crypto.addressFromPublicKey(System.recoverPublicKey(signatures.values[i].bytes_value, transactionId)!)
-      )) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  authorize(args: authority.authorize_arguments): authority.authorize_result {
-    const type = args.type;
-
-    if (type === authority.authorization_type.transaction_application) {
-      return new authority.authorize_result(true);
-    }
-
-    // for all other auth types, check that the contract signed the transaction
-    return new authority.authorize_result(this.hasContractOwnerSigned());
-  }
-
   name(args: collections.name_arguments): collections.string_object {
     return new collections.string_object(Constants.NAME);
   }
